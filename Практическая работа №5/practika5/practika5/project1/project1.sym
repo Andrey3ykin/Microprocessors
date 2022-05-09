@@ -1,0 +1,99 @@
+__Lrdata 46 FFFFFFBD DATA
+__Hrbss 46 0 DATA
+__Lrbss 20 0 DATA
+strx_xcopy 1AE 0 CODE
+__Birdata 3 FFFFFFBD DATA
+__Hirdata 46 FFFFFFBD DATA
+__Lirdata 46 FFFFFFBD DATA
+powerup F1 0 CODE
+__Htext 46 0
+__Ltext 46 0
+strx_copy 1C4 0 CODE
+__Hcode 46 0
+__Lcode 46 0
+ldb_r0 14A 0 CODE
+ldc_r0 146 0 CODE
+__Hdata 122 0 CODE
+__Hconst 100 0 CODE
+__Ldata 100 0 CODE
+__Lconst 100 0 CODE
+__Bbss 46 0 XDATA
+ldb_r1 157 0 CODE
+ldc_r1 153 0 CODE
+__Hbss 46 0 XDATA
+__Hstrings 13B 0 CODE
+ldb_r2 164 0 CODE
+ldc_r2 160 0 CODE
+__Lbss 46 0 XDATA
+__Lstrings 122 0 CODE
+ldb_r3 171 0 CODE
+ldc_r3 16D 0 CODE
+ldb_r4 17E 0 CODE
+ldc_r4 17A 0 CODE
+ldb_r5 18B 0 CODE
+ldc_r5 187 0 CODE
+str_xcopy 1AE 0 CODE
+__S0 203 0
+ldb_r6 198 0 CODE
+ldc_r6 194 0 CODE
+ldb_r7 1A5 0 CODE
+ldc_r7 1A1 0 CODE
+start1 1EF 0 CODE
+__Hnvram 46 0 XDATA
+small_model 1 0
+__Lnvram 46 0 XDATA
+ldc_byte 13B 0 CODE
+__Hheap 46 0 XDATA
+__Lheap 46 0 XDATA
+_main 3 0 CODE
+str_copy 1C4 0 CODE
+?a_main 20 0 DATA
+_exit 200 0 CODE
+start 0 0 CODE
+intlevel0 0 0
+strx_load 1C4 0 CODE
+__Brbit 20 20 BITSEG
+str_load 1C4 0 CODE
+__Hrbit 0 20 BITSEG
+intlevel1 0 0
+__Hvectors 3 0 CODE
+__Lrbit 0 20 BITSEG
+__Lvectors 0 0 CODE
+__Bidata 46 0 DATA
+__Hidata 46 0 DATA
+__Lidata 46 0 DATA
+stack_internal 1 0
+__Brdata 3 FFFFFFBD DATA
+__Hrdata 46 FFFFFFBD DATA
+%segments
+vectors 0 F3 CODE
+rbit 0 25 BITSEG
+data 100 202 CODE
+%locals
+C:\Users\Aboba\Desktop\5669A~1\PRACTI~1\PRACTI~1\project1\main_0.obj
+C:\Users\Aboba\Desktop\5669A~1\PRACTI~1\PRACTI~1\project1\main.c
+3 3 0 CODE
+5 6 0 CODE
+6 C 0 CODE
+8 1B 0 CODE
+10 2A 0 CODE
+12 39 0 CODE
+14 49 0 CODE
+15 53 0 CODE
+17 62 0 CODE
+19 6E 0 CODE
+20 71 0 CODE
+21 74 0 CODE
+22 77 0 CODE
+23 7A 0 CODE
+24 7D 0 CODE
+25 80 0 CODE
+26 A0 0 CODE
+28 AF 0 CODE
+29 BF 0 CODE
+30 C2 0 CODE
+26 C5 0 CODE
+15 D1 0 CODE
+12 DD 0 CODE
+11 EA 0 CODE
+37 ED 0 CODE

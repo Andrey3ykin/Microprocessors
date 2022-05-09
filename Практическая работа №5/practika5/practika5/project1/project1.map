@@ -1,0 +1,108 @@
+HI-TECH Software 8051-C Compiler V9.60
+
+Linker command line:
+
+--edf=C:\PROGRA~2\HI-TEC~1\HC51\9.60\dat\en_msgs.txt \
+  -h+C:\Users\Aboba\Desktop\5669A~1\PRACTI~1\PRACTI~1\project1\project1.sym \
+  -z -Q8051AH -ol.obj \
+  -MC:\Users\Aboba\Desktop\5669A~1\PRACTI~1\PRACTI~1\project1\project1.map \
+  -E1 -ver=8051-C#V9.60 -ACODE=00h-0FFFh -pvectors=00h \
+  -prbit=0/20h,rbss,rdata/CODE,irdata/CODE,idata/rbss -pbss=XDATA/idata \
+  -pdata=CODE+100h -pconst=CODE+100h -pstrings=CODE+100h -pnvram=bss,heap \
+  C:\Users\Aboba\AppData\Local\Temp\s4tc.obj \
+  C:\Users\Aboba\Desktop\5669A~1\PRACTI~1\PRACTI~1\project1\main_0.obj \
+  C:\PROGRA~2\HI-TEC~1\HC51\9.60\lib\51--nsc.lib 
+
+Object code version is 3.8
+
+Machine type is 8051AH
+
+Call graph:
+
+*start1 size 0,0 offset 0
+*    _main size 0,38 offset 0
+
+		Name          Link     Load   Length Selector Space Scale
+C:\Users\Aboba\AppData\Local\Temp\s4tc.obj
+		vectors          0        0        3       0     0
+		text           1EF      1EF       14     100     0
+C:\Users\Aboba\Desktop\5669A~1\PRACTI~1\PRACTI~1\project1\main_0.obj
+		data           100      100       22     100     0
+		strings        122      122       19     100     0
+		text             3        3       EE       0     0
+
+C:\PROGRA~2\HI-TEC~1\HC51\9.60\lib\51--nsc.lib
+ldc_byte.obj    text           13B      13B       73     100     0
+powerup.obj     text            F1       F1        3       0     0
+str_cops.obj    text           1AE      1AE       41     100     0
+
+COMMON          rbss            20       20       26      20     1
+
+TOTAL		Name          Link     Load   Length
+	CLASS	CODE     
+		vectors          0        0        3
+		data           100      100       22
+		text           1EF      1EF       14
+		strings        122      122       19
+		text             3        3       EE
+		text           13B      13B       73
+		text            F1       F1        3
+		text           1AE      1AE       41
+
+	CLASS	DATA     
+		rbss            20       20       26
+
+	CLASS	XDATA    
+
+	CLASS	BITSEG   
+
+
+
+SEGMENTS	Name		Load	Length	 Top	Selector    Space Class
+
+		vectors         000000	0000F4	0000F4	       0       0  CODE    
+		rbit            000020	000026	000046	      20       1  BITSEG  
+		data            000100	000103	000203	     100       0  CODE    
+
+
+UNUSED ADDRESS RANGES
+
+	CODE             0F4-0FF
+	                 203-FFF
+
+                                  Symbol Table
+
+?a_main        rbss    020  __Bbss         bss     046
+__Bidata       idata   046  __Birdata      irdata  003
+__Brbit        rbit    020  __Brdata       rdata   003
+__Hbss         bss     046  __Hcode        code    046
+__Hconst       const   100  __Hdata        data    122
+__Hheap        heap    046  __Hidata       idata   046
+__Hirdata      irdata  046  __Hnvram       nvram   046
+__Hrbit        rbit    000  __Hrbss        rbss    046
+__Hrdata       rdata   046  __Hstrings     strings 13B
+__Htext        text    046  __Hvectors     vectors 003
+__Lbss         bss     046  __Lcode        code    046
+__Lconst       const   100  __Ldata        data    100
+__Lheap        heap    046  __Lidata       idata   046
+__Lirdata      irdata  046  __Lnvram       nvram   046
+__Lrbit        rbit    000  __Lrbss        rbss    020
+__Lrdata       rdata   046  __Lstrings     strings 122
+__Ltext        text    046  __Lvectors     vectors 000
+__S0           (abs)   203  _exit          text    200
+_main          text    003  intlevel0      (abs)   000
+intlevel1      (abs)   000  ldb_r0         text    14A
+ldb_r1         text    157  ldb_r2         text    164
+ldb_r3         text    171  ldb_r4         text    17E
+ldb_r5         text    18B  ldb_r6         text    198
+ldb_r7         text    1A5  ldc_byte       text    13B
+ldc_r0         text    146  ldc_r1         text    153
+ldc_r2         text    160  ldc_r3         text    16D
+ldc_r4         text    17A  ldc_r5         text    187
+ldc_r6         text    194  ldc_r7         text    1A1
+powerup        text    0F1  small_model    (abs)   001
+stack_internal (abs)   001  start          vectors 000
+start1         text    1EF  str_copy       text    1C4
+str_load       text    1C4  str_xcopy      text    1AE
+strx_copy      text    1C4  strx_load      text    1C4
+strx_xcopy     text    1AE  
