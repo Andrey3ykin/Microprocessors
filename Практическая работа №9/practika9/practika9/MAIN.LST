@@ -1,0 +1,81 @@
+MAIN                                                                                                          PAGE 1
+
+                       1    $MOD51
+0000 020020            2    jmp start
+000B                   3    org 0bh
+000B C28C              4    clr TCON.4
+000D 32                5    reti
+0020                   6    org 20h
+0020                   7    start:
+0020 C3                8    clr C
+0021 758901            9    mov TMOD,#01h
+0024 D2AF             10    setb IE.7
+0026 D2A9             11    setb IE.1
+0028 75A000           12    mov P2,#0h
+                      13    
+002B                  14    Period:
+002B 7400             15    mov A,#0h ; uroven impulsa nachalo
+002D 758AFF           16    mov TL0,#0FFh
+0030 758CFF           17    mov TH0,#0FFh
+0033 F5A0             18    mov P2,A
+0035 D28C             19    setb TCON.4
+                      20    
+0037                  21    next1:
+0037 308DFD           22    jnb TCON.5, next1
+003A 7400             23    mov A,#0h; uroven impulsa nachalo
+003C 758A12           24    mov TL0,#12h
+003F 758CFF           25    mov TH0,#0FFh
+0042 F5A0             26    mov P2,A
+0044 D28C             27    setb TCON.4
+                      28    
+0046                  29    next2:
+0046 2404             30    add A,#4h ; otklonenie impulsa nachalo
+0048 F5A0             31    mov P2,A
+004A 308DF9           32    jnb TCON.5,next2
+004D 74FF             33    mov A, #0FFh ; vusota impulsa
+004F 758A12           34    mov TL0,#12h
+0052 758CFF           35    mov TH0,#0FFh
+0055 F5A0             36    mov P2,A
+0057 D28C             37    setb TCON.4
+                      38    
+0059                  39    next3:
+0059 308DFD           40    jnb TCON.5,next3
+005C 747F             41    mov A,#07Fh ; uroven impulsa konec
+005E 758A12           42    mov TL0,#12h
+0061 758CFF           43    mov TH0,#0FFh
+0064 F5A0             44    mov P2,A
+0066 D28C             45    setb TCON.4 
+                      46    
+0068                  47    next4:
+0068 24FE             48    add A,#-2h ; otklonenie impulsa konec
+006A F5A0             49    mov P2,A
+006C 308DF9           50    jnb TCON.5,next4
+006F 758A12           51    mov TL0,#012h
+0072 758CFF           52    mov TH0,#0FFh
+0075 F5A0             53    mov P2,A
+0077 D28C             54    setb TCON.4
+                      55    
+0079                  56    next5:
+0079 308DFD           57    jnb TCON.5,next5
+007C C3               58    clr C
+MAIN                                                                                                          PAGE 2
+
+007D 80AC             59    jmp Period 
+                      60    END
+
+VERSION 1.2k ASSEMBLY COMPLETE, 0 ERRORS FOUND
+MAIN                                                                                                          PAGE 3
+
+IE . . . . . . . . . . . . . . .  D ADDR  00A8H  PREDEFINED  
+NEXT1. . . . . . . . . . . . . .  C ADDR  0037H  
+NEXT2. . . . . . . . . . . . . .  C ADDR  0046H  
+NEXT3. . . . . . . . . . . . . .  C ADDR  0059H  
+NEXT4. . . . . . . . . . . . . .  C ADDR  0068H  
+NEXT5. . . . . . . . . . . . . .  C ADDR  0079H  
+P2 . . . . . . . . . . . . . . .  D ADDR  00A0H  PREDEFINED  
+PERIOD . . . . . . . . . . . . .  C ADDR  002BH  
+START. . . . . . . . . . . . . .  C ADDR  0020H  
+TCON . . . . . . . . . . . . . .  D ADDR  0088H  PREDEFINED  
+TH0. . . . . . . . . . . . . . .  D ADDR  008CH  PREDEFINED  
+TL0. . . . . . . . . . . . . . .  D ADDR  008AH  PREDEFINED  
+TMOD . . . . . . . . . . . . . .  D ADDR  0089H  PREDEFINED  
